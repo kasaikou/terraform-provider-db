@@ -1,0 +1,11 @@
+services:
+  pq:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    tmpfs:
+      - /var/lib/postgresql/data
+    ports:
+      - 5432:5432
